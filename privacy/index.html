@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,25 +15,19 @@
             --text-main: #f2f3f5;
             --text-muted: #949ba4;
             --border-color: rgba(255, 255, 255, 0.08);
-            --success: #23a55a;
+            --success-bg: rgba(35, 165, 90, 0.12);
+            --success-border: #23a55a;
         }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
+        * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
             background-color: var(--bg-primary);
             color: var(--text-main);
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
+            line-height: 1.65;
             padding: 40px 20px;
         }
-
         .container {
-            max-width: 860px;
+            max-width: 880px;
             margin: 0 auto;
             background-color: var(--bg-secondary);
             border: 1px solid var(--border-color);
@@ -42,19 +35,16 @@
             padding: 40px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
         }
-
         .header {
             border-bottom: 1px solid var(--border-color);
             padding-bottom: 24px;
             margin-bottom: 32px;
         }
-
         .nav-links {
             margin-bottom: 16px;
             display: flex;
             gap: 16px;
         }
-
         .nav-links a {
             color: var(--accent);
             text-decoration: none;
@@ -62,24 +52,20 @@
             font-weight: 500;
             transition: color 0.2s;
         }
-
         .nav-links a:hover {
             color: #7983f5;
             text-decoration: underline;
         }
-
         h1 {
             font-size: 2.2rem;
             font-weight: 700;
             color: #ffffff;
             margin-bottom: 8px;
         }
-
         .updated-date {
             color: var(--text-muted);
             font-size: 0.9rem;
         }
-
         h2 {
             font-size: 1.35rem;
             color: #ffffff;
@@ -88,22 +74,13 @@
             padding-bottom: 6px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
-
-        p,
-        ul {
+        p, ul {
             color: #dbdee1;
             margin-bottom: 16px;
             font-size: 1rem;
         }
-
-        ul {
-            padding-left: 24px;
-        }
-
-        li {
-            margin-bottom: 8px;
-        }
-
+        ul { padding-left: 24px; }
+        li { margin-bottom: 8px; }
         .btn {
             display: inline-block;
             background-color: var(--accent);
@@ -115,29 +92,23 @@
             margin-top: 20px;
             transition: background-color 0.2s;
         }
-
-        .btn:hover {
-            background-color: var(--accent-hover);
+        .btn:hover { background-color: var(--accent-hover); }
+        .guarantee-box {
+            background-color: var(--success-bg);
+            border-left: 4px solid var(--success-border);
+            padding: 18px;
+            border-radius: 8px;
+            margin: 24px 0;
+            font-size: 0.96rem;
         }
-
-        .callout-box {
+        .highlight-box {
             background-color: var(--bg-card);
-            border-left: 4px solid var(--success);
+            border-left: 4px solid var(--accent);
             padding: 16px;
             border-radius: 6px;
             margin: 20px 0;
             font-size: 0.95rem;
         }
-
-        .badge {
-            background-color: rgba(35, 165, 90, 0.15);
-            color: #57f287;
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-size: 0.85rem;
-            font-weight: 600;
-        }
-
         footer {
             margin-top: 40px;
             padding-top: 20px;
@@ -148,7 +119,6 @@
         }
     </style>
 </head>
-
 <body>
     <div class="container">
         <div class="header">
@@ -158,81 +128,74 @@
                 <a href="/privacy">Privacy Policy</a>
             </div>
             <h1>Privacy Policy</h1>
-            <p class="updated-date">Last Updated: September 13, 2026</p>
+            <p class="updated-date">Last Updated & Effective Date: September 13, 2026</p>
         </div>
 
-        <p>This Privacy Policy explains how <strong>Husky</strong> ("Bot", "we", "our") collects, uses, stores, and
-            protects user and server information when you interact with the bot on Discord.</p>
+        <p>This Privacy Policy outlines how <strong>Husky</strong> ("Bot", "we", "us", "our") collects, processes, stores, and safeguards information obtained from users and Discord servers ("guilds") in full compliance with the <strong>Discord Developer Policy</strong>, the <strong>General Data Protection Regulation (GDPR)</strong>, and applicable international privacy regulations.</p>
 
-        <div class="callout-box">
-            <strong>🔒 Your Privacy Matters:</strong><br>
-            Husky <strong>NEVER</strong> reads, records, or stores the actual text content of your messages, nor does it
-            record or listen to voice audio in channels. We only track activity metrics (such as message count and time
-            spent in voice) to award experience points (XP).
+        <div class="guarantee-box">
+            <strong>🛡️ CRITICAL PRIVACY GUARANTEE:</strong><br>
+            Husky strictly respects your privacy. We <strong>NEVER</strong> read, collect, inspect, or store the actual text content of your messages, uploaded attachments, images, or media. We <strong>NEVER</strong> record, listen to, or process audio communications in Discord voice channels. All activity calculations are performed strictly on numerical timestamps and event counts.
         </div>
 
         <h2>1. Information We Collect</h2>
-        <p>Husky collects only the minimum data required to function as an activity and leveling system:</p>
+        <p>To provide activity tracking, level roles, and leaderboard features, Husky processes only the minimum data technically required:</p>
         <ul>
-            <li><strong>User Identifiers:</strong> Discord User ID, username, and avatar hash (used to link XP to your
-                account and display leaderboards).</li>
-            <li><strong>Guild (Server) Identifiers:</strong> Server ID, channel IDs, and role IDs (used to apply custom
-                server settings and assign level roles).</li>
-            <li><strong>Activity Metrics:</strong>
+            <li><strong>Public Discord Identifiers:</strong>
                 <ul>
-                    <li>Message activity count (increments of messages sent to calculate text XP).</li>
-                    <li>Voice activity duration (time connected to voice channels to calculate voice XP).</li>
-                    <li>Invite counts and bonus XP allocations.</li>
+                    <li><strong>User ID, Username, and Avatar Hash:</strong> Necessary to identify your account, associate experience points (XP), and render rank cards / leaderboards.</li>
+                    <li><strong>Guild (Server) ID, Channel IDs, and Role IDs:</strong> Necessary to associate configurations, role rewards, and blacklisted channels with specific servers.</li>
                 </ul>
             </li>
-            <li><strong>Server Configurations:</strong> Admin settings such as role rewards, XP rates, cooldowns, and
-                notification channels.</li>
+            <li><strong>Activity Metrics (Numerical Only):</strong>
+                <ul>
+                    <li>Message count and timestamps (used solely to calculate message XP).</li>
+                    <li>Voice channel connection duration and timestamps (used solely to calculate voice XP).</li>
+                    <li>Invite counts and bonus point allocations configured by server admins.</li>
+                </ul>
+            </li>
+            <li><strong>Server Configurations:</strong> Custom settings chosen by server administrators, including XP multipliers, level-up notification channels, and custom role assignments.</li>
         </ul>
 
-        <h2>2. How We Use Collected Data</h2>
-        <p>The information collected is used solely to:</p>
+        <h2>2. Legal Basis for Processing (GDPR & International Law)</h2>
+        <p>We process your data under the legal basis of <strong>Legitimate Interest</strong> and <strong>Performance of a Contract</strong> to provide the core requested services (tracking server activity, generating leaderboards, and distributing configured level roles) when Husky is added to a server.</p>
+
+        <h2>3. How We Use the Data</h2>
+        <p>Collected data is used exclusively to:</p>
         <ul>
-            <li>Calculate and maintain accurate user levels, rankings, and leaderboards.</li>
-            <li>Automatically award level roles configured by server administrators.</li>
-            <li>Send level-up or voice session summary notifications (if enabled).</li>
-            <li>Provide server statistics via commands such as <code>/stats</code> and <code>/rank</code>.</li>
+            <li>Calculate user levels, experience points (XP), and rankings.</li>
+            <li>Automatically assign or revoke server-configured level roles.</li>
+            <li>Display server leaderboards via <code>/top</code>, <code>/leaderboard</code>, and <code>/rank</code> commands.</li>
+            <li>Enforce cooldowns and protect system stability against abuse.</li>
         </ul>
 
-        <h2>3. Data Storage & Security</h2>
-        <p>All data is stored in a private, secured database with restricted access. We employ industry-standard
-            practices to protect your data from unauthorized access, alteration, or disclosure.</p>
-        <p>We <strong>do not sell, trade, or rent</strong> your personal or guild data to third parties under any
-            circumstances.</p>
+        <h2>4. Data Sharing & Third-Party Disclosure</h2>
+        <p><strong>We do NOT sell, rent, monetize, or trade your personal data with any third party, advertiser, or data broker under any circumstances.</strong></p>
+        <p>Data is only processed through the official Discord API as necessary for bot operations, governed by <a href="https://discord.com/privacy" target="_blank" style="color: var(--accent);">Discord's Privacy Policy</a>.</p>
 
-        <h2>4. Data Retention & Deletion Rights</h2>
-        <p>We retain your activity data for as long as the bot remains in your Discord server to maintain continuity of
-            leaderboards and levels.</p>
+        <h2>5. Data Storage & Security Measures</h2>
+        <p>All collected data is stored in isolated, access-restricted database systems protected by modern security practices, including network firewalls, encrypted connections, and access control. We take all reasonable and appropriate technical measures to prevent unauthorized access, accidental loss, alteration, or disclosure of data.</p>
+
+        <h2>6. Data Retention & Deletion Rights (GDPR Article 17 / Right to Erasure)</h2>
+        <p>We retain data only for as long as necessary to maintain active server leaderboards:</p>
         <ul>
-            <li><strong>Server Reset:</strong> Server administrators can wipe all server data and leaderboards at any
-                time using the <code>/reset</code> command.</li>
-            <li><strong>Data Deletion Request:</strong> If an individual user or server owner wishes to have their data
-                completely removed from our database, you may submit a request through our Support Server, and we will
-                promptly delete it.</li>
+            <li><strong>Server Data Wiping:</strong> Server administrators can instantly delete and purge all server-specific activity data, XP logs, and leaderboards using the <code>/reset</code> command.</li>
+            <li><strong>Individual User Deletion:</strong> Any individual user or server administrator has the right to request complete deletion of their stored data from our database. To exercise your Right to Erasure, simply join our Support Server and submit a deletion request. Requests are processed within 30 days.</li>
         </ul>
 
-        <h2>5. Third-Party Services</h2>
-        <p>Husky interacts with the official <strong>Discord API</strong>. By using the bot, you are also subject to <a
-                href="https://discord.com/privacy" target="_blank" style="color: var(--accent);">Discord's Privacy
-                Policy</a>.</p>
+        <h2>7. Children's Privacy (COPPA & GDPR Compliance)</h2>
+        <p>Husky is not directed toward children under 13 years of age (or under 16 in the European Economic Area). We do not knowingly collect personal data from children under these age limits. If we discover that a user under the legal age has provided personal data, we will take immediate steps to delete such data from our systems.</p>
 
-        <h2>6. Changes to This Privacy Policy</h2>
-        <p>We may update this Privacy Policy periodically to reflect new features or legal requirements. Updates will be
-            posted directly to this page with an updated revision date.</p>
+        <h2>8. Changes to This Policy</h2>
+        <p>We reserve the right to modify this Privacy Policy at any time. Any changes will be posted on this page with an updated "Effective Date." Continued use of Husky after updates are published signifies acceptance of the revised policy.</p>
 
-        <h2>7. Contact & Support</h2>
-        <p>For any privacy-related inquiries or data removal requests, please contact us on our official Discord Support
-            Server:</p>
-        <a href="https://discord.com/invite/DXymuZqkBv" target="_blank" class="btn">Join Support Server</a>
+        <h2>9. Contact & Data Protection Officer</h2>
+        <p>If you have any questions about this Privacy Policy, your data rights, or wish to submit a data removal request, please contact us via our official Discord Support Server:</p>
+        <a href="https://discord.gg/p2rWjQmpWx" target="_blank" class="btn">Join Support Server</a>
 
         <footer>
             &copy; 2026 Husky Bot &bull; <a href="/terms" style="color: var(--text-muted);">Terms of Service</a>
         </footer>
     </div>
 </body>
-
 </html>
