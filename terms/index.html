@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms of Service - Husky Discord Bot</title>
+    <link rel="icon" type="image/png" href="../husky.png">
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
     <style>
         :root {
@@ -56,11 +57,25 @@
             color: #7983f5;
             text-decoration: underline;
         }
+        .brand-header {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+        .brand-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2.5px solid var(--accent);
+            box-shadow: 0 4px 16px rgba(88, 101, 242, 0.35);
+            flex-shrink: 0;
+        }
         h1 {
             font-size: 2.2rem;
             font-weight: 700;
             color: #ffffff;
-            margin-bottom: 8px;
+            margin-bottom: 4px;
         }
         .updated-date {
             color: var(--text-muted);
@@ -129,8 +144,13 @@
                 <a href="/terms">Terms of Service</a>
                 <a href="/privacy">Privacy Policy</a>
             </div>
-            <h1>Terms of Service</h1>
-            <p class="updated-date">Last Updated & Effective Date: September 13, 2026</p>
+            <div class="brand-header">
+                <img src="../husky.png" alt="Husky Bot" class="brand-avatar">
+                <div>
+                    <h1>Terms of Service</h1>
+                    <p class="updated-date">Last Updated & Effective Date: September 13, 2026</p>
+                </div>
+            </div>
         </div>
 
         <div class="legal-box">
