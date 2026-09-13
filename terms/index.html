@@ -3,21 +3,215 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Terms and Conditions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - Husky Discord Bot</title>
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <style>
+        :root {
+            --bg-primary: #111214;
+            --bg-secondary: #1e1f22;
+            --bg-card: #2b2d31;
+            --accent: #5865f2;
+            --accent-hover: #4752c4;
+            --text-main: #f2f3f5;
+            --text-muted: #949ba4;
+            --border-color: rgba(255, 255, 255, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-main);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .header {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 24px;
+            margin-bottom: 32px;
+        }
+
+        .nav-links {
+            margin-bottom: 16px;
+            display: flex;
+            gap: 16px;
+        }
+
+        .nav-links a {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #7983f5;
+            text-decoration: underline;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+
+        .updated-date {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        h2 {
+            font-size: 1.35rem;
+            color: #ffffff;
+            margin-top: 32px;
+            margin-bottom: 12px;
+            padding-bottom: 6px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        p,
+        ul {
+            color: #dbdee1;
+            margin-bottom: 16px;
+            font-size: 1rem;
+        }
+
+        ul {
+            padding-left: 24px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-hover);
+        }
+
+        .highlight-box {
+            background-color: var(--bg-card);
+            border-left: 4px solid var(--accent);
+            padding: 16px;
+            border-radius: 6px;
+            margin: 20px 0;
+            font-size: 0.95rem;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+    </style>
 </head>
 
-<body style="background-color: #202124; color: white; font-family: sans-serif; padding: 20px;">
-    <h1>Terms and Conditions</h1>
-    <p>What did you expect coming all the way here?</p>
-    <p>Just between us, I wasn't expecting anything either.</p>
-    <br>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/terms">Terms of Service</a>
+                <a href="/privacy">Privacy Policy</a>
+            </div>
+            <h1>Terms of Service</h1>
+            <p class="updated-date">Last Updated: September 13, 2026</p>
+        </div>
 
-    <!-- Visible Rick Roll Button -->
-    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"
-        style="background-color: #ff3b3b; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 50px; cursor: pointer; transition: 0.3s;"
-        onmouseover="this.style.backgroundColor='#d32f2f'" onmouseout="this.style.backgroundColor='#ff3b3b'">Do Not
-        Click Here</a>
+        <div class="highlight-box">
+            By inviting or using the <strong>Husky</strong> Discord bot ("Bot", "Service") in your Discord server, you
+            agree to comply with and be bound by the following terms. If you do not agree with any part of these terms,
+            please do not invite or use Husky.
+        </div>
+
+        <h2>1. Service Description</h2>
+        <p>Husky is an automated Discord bot designed to provide activity ranking, experience points (XP) calculation,
+            level-based role rewards, server leaderboards, and related community engagement features.</p>
+
+        <h2>2. Eligibility & Discord Terms</h2>
+        <p>To use Husky, you must:</p>
+        <ul>
+            <li>Be at least 13 years old (or the minimum legal age required in your jurisdiction to use Discord).</li>
+            <li>Fully comply with the official <a href="https://discord.com/terms" target="_blank"
+                    style="color: var(--accent);">Discord Terms of Service</a> and <a
+                    href="https://discord.com/guidelines" target="_blank" style="color: var(--accent);">Discord
+                    Community Guidelines</a>.</li>
+        </ul>
+
+        <h2>3. Acceptable Use Policy</h2>
+        <p>When using Husky, you agree NOT to:</p>
+        <ul>
+            <li>Attempt to exploit, bug-abuse, reverse engineer, or disrupt the bot's services or underlying database.
+            </li>
+            <li>Spam commands, automate malicious API requests, or deliberately cause rate limits / service degradation
+                for other users.</li>
+            <li>Use the bot for any illegal, fraudulent, or harmful activities.</li>
+            <li>Use automated scripts or self-bots to artificially inflate activity metrics (XP, message count, or voice
+                time).</li>
+        </ul>
+
+        <h2>4. Virtual Points, XP & Level Rewards</h2>
+        <p>All points, levels, and XP provided by Husky are entirely virtual. They have no real-world monetary value,
+            cannot be redeemed for fiat currency, and are subject to server administrator configurations or resets at
+            any time.</p>
+
+        <h2>5. Service Availability & Termination</h2>
+        <p>We make every effort to ensure high availability and stability, but Husky is provided on an <strong>"as-is"
+                and "as-available"</strong> basis. We reserve the right to temporarily suspend, modify, or permanently
+            terminate the service, or restrict access to any guild or user violating these terms, at our discretion and
+            without prior notice.</p>
+
+        <h2>6. Limitation of Liability</h2>
+        <p>To the maximum extent permitted by applicable law, the developers and operators of Husky shall not be liable
+            for any direct, indirect, incidental, or consequential damages resulting from the use or inability to use
+            the Bot, including but not limited to loss of server data, configurations, or roles.</p>
+
+        <h2>7. Changes to Terms</h2>
+        <p>We reserve the right to update or modify these Terms of Service at any time. Continued use of the Bot
+            following any changes constitutes your acceptance of the updated terms.</p>
+
+        <h2>8. Contact & Support</h2>
+        <p>If you have any questions, concerns, or need assistance regarding these Terms, please join our official
+            Discord Support Server:</p>
+        <a href="https://discord.com/invite/DXymuZqkBv" target="_blank" class="btn">Join Support Server</a>
+
+        <footer>
+            &copy; 2026 Husky Bot &bull; <a href="/privacy" style="color: var(--text-muted);">Privacy Policy</a>
+        </footer>
+    </div>
 </body>
 
 </html>

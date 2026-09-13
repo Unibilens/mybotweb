@@ -1,11 +1,181 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Husky - Discord Activity & Leveling Bot</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        :root {
+            --bg-primary: #111214;
+            --bg-secondary: #1e1f22;
+            --bg-card: #2b2d31;
+            --accent: #5865f2;
+            --accent-hover: #4752c4;
+            --text-main: #f2f3f5;
+            --text-muted: #949ba4;
+            --border-color: rgba(255, 255, 255, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-main);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            width: 100%;
+        }
+
+        .hero {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 60px 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .bot-badge {
+            display: inline-block;
+            background-color: rgba(88, 101, 242, 0.15);
+            color: #7983f5;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 16px;
+        }
+
+        p.subtitle {
+            color: #dbdee1;
+            font-size: 1.15rem;
+            max-width: 600px;
+            margin: 0 auto 32px auto;
+            line-height: 1.6;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 36px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.2s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            color: #ffffff;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: var(--bg-card);
+            color: #ffffff;
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-secondary:hover {
+            background-color: #35373c;
+            transform: translateY(-2px);
+        }
+
+        .links {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            border-top: 1px solid var(--border-color);
+            padding-top: 24px;
+        }
+
+        .links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .links a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-top: 40px;
+        }
+    </style>
 </head>
-<body style="background-color: #202124; color: white;">
-    <h1>Hello World!</h1>
-    <p>This will be my first website.</p>
+
+<body>
+    <div class="container">
+        <div class="hero">
+            <span class="bot-badge">Discord Bot</span>
+            <h1>Husky</h1>
+            <p class="subtitle">A powerful, modern Discord bot for tracking server activity, calculating XP, awarding
+                level roles, and displaying persistent leaderboards.</p>
+
+            <div class="cta-buttons">
+                <a href="https://discord.com/oauth2/authorize?client_id=1531753467264241994&permissions=8&scope=bot%20applications.commands"
+                    target="_blank" class="btn btn-primary">
+                    Invite Husky
+                </a>
+                <a href="https://discord.com/invite/p2rWjQmpWx" target="_blank" class="btn btn-secondary">
+                    Support Server
+                </a>
+            </div>
+
+            <div class="links">
+                <a href="/terms">Terms of Service</a>
+                <a href="/privacy">Privacy Policy</a>
+            </div>
+        </div>
+
+        <footer>
+            &copy; 2026 BilenDev &bull; Husky Bot &bull; All Rights Reserved.
+        </footer>
+    </div>
 </body>
+
 </html>
