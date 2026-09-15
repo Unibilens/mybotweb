@@ -2,9 +2,6 @@
  * ====================================================================
  * Husky Bot config
  * ====================================================================
- * Davet linklerini veya destek sunucusu adresini değiştirmek istediğinizde
- * yalnızca aşağıdaki değişkenleri güncellemeniz yeterlidir. Sitedeki tüm
- * ilgili butonlar ve bağlantılar otomatik olarak buradan beslenir.
  */
 
 const CONFIG = {
@@ -12,7 +9,10 @@ const CONFIG = {
     botInvite: "https://discord.com/oauth2/authorize?client_id=1531753467264241994&permissions=8&scope=bot%20applications.commands",
 
     // Discord Support server Link
-    supportServer: "https://discord.gg/Y2tC6UpRnw"
+    supportServer: "https://discord.gg/Y2tC6UpRnw",
+
+    // GitHub Repository Link
+    githubRepo: "https://github.com/Unibilens/"
 };
 
 // apply link in page
@@ -37,6 +37,15 @@ const CONFIG = {
                 el.rel = "noopener noreferrer";
             }
         });
+
+        // data-link="githubRepo" veya data-link="github-repo"
+        const githubElements = document.querySelectorAll('[data-link="githubRepo"], [data-link="github-repo"]');
+        githubElements.forEach(el => {
+            if (el.tagName.toLowerCase() === 'a') {
+                el.href = CONFIG.githubRepo;
+                el.rel = "noopener noreferrer";
+            }
+        });
     }
 
     // Tıklama anında da kontrol ederek linkin anında açılmasını garantiye alır
@@ -48,6 +57,8 @@ const CONFIG = {
             target.href = CONFIG.botInvite;
         } else if (linkType === 'supportServer' || linkType === 'support-server') {
             target.href = CONFIG.supportServer;
+        } else if (linkType === 'githubRepo' || linkType === 'github-repo') {
+            target.href = CONFIG.githubRepo;
         }
     });
 
