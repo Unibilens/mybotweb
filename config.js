@@ -12,7 +12,7 @@ const CONFIG = {
     supportServer: "https://discord.gg/Y2tC6UpRnw",
 
     // GitHub Repository Link
-    githubRepo: "https://github.com/Unibilens/"
+    githubRepo: "https://github.com/Unibilens/HuskyBot"
 };
 
 // apply link in page
